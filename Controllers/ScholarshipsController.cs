@@ -1,12 +1,28 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using ScholarComp.Models;
+using ScholarComp.Repositories.Irepos;
 
 namespace ScholarComp.Controllers
 {
-    public class ScholarshipsController : Controller
+    [ApiController]
+    [Route("api/[Controller]")]
+    public class ScholarshipsController : ControllerBase
     {
-        public IActionResult Index()
+        private readonly IScholarship scholarShip;
+        public ScholarshipsController(IScholarship admin, ElsewedySchoolSysContext db)
         {
-            return View();
+            this.scholarShip = admin;
         }
+        [HttpGet("All")]
+        public async Task<IActionResult> getAll()
+        {
+            var lScholar = await scholarShip.GetAllScholarships();
+            return Ok(lScholar);
+        }
+
+
+
+
     }
 }

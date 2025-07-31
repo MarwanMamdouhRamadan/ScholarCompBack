@@ -9,6 +9,8 @@ public partial class Scholarship
 
     public string ScholarshipName { get; set; } = null!;
 
+    public string ScholarshipDescription { get; set; } = null!;
+
     public decimal Amount { get; set; }
 
     public string ProviderName { get; set; } = null!;
@@ -18,4 +20,6 @@ public partial class Scholarship
     public DateOnly? EndDate { get; set; }
 
     public long StatusId { get; set; }
+
+    public virtual Status Status { get; set; } = null!;
 }

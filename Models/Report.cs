@@ -16,4 +16,8 @@ public partial class Report
     public long SubmitterAccountId { get; set; }
 
     public long StatusId { get; set; }
+
+    public virtual Status Status { get; set; } = null!;
+
+    public virtual Account SubmitterAccount { get; set; } = null!;
 }

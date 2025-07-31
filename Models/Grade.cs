@@ -14,4 +14,14 @@ public partial class Grade
     public long? AdminAccountId { get; set; }
 
     public long StatusId { get; set; }
+
+    public virtual Account? AdminAccount { get; set; }
+
+    public virtual ICollection<Class> Classes { get; set; } = new List<Class>();
+
+    public virtual Status Status { get; set; } = null!;
+
+    public virtual ICollection<SubordinateTicket> SubordinateTickets { get; set; } = new List<SubordinateTicket>();
+
+    public virtual ICollection<Task> Tasks { get; set; } = new List<Task>();
 }

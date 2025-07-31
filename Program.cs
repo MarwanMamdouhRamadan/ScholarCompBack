@@ -1,5 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using ScholarComp.Models;
+using ScholarComp.Repositories.immplemntion;
+using ScholarComp.Repositories.Irepos;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -9,7 +11,8 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-builder.Services.AddDbContext<AppDbContext>(x => x.UseSqlServer(builder.Configuration.GetConnectionString("connstr")));
+builder.Services.AddScoped<IScholarship, ScholarshipImp>();
+builder.Services.AddDbContext<ElsewedySchoolSysContext>(x => x.UseSqlServer(builder.Configuration.GetConnectionString("connstr")));
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -24,5 +27,5 @@ app.UseHttpsRedirection();
 app.UseAuthorization();
 
 app.MapControllers();
-
+Console.WriteLine("CONNECTION = " + builder.Configuration.GetConnectionString("connstr"));
 app.Run();

@@ -170,3 +170,4 @@ C:\Users\El-Mester\source\repos\ScholarComp\ScholarComp\obj\Debug\net8.0\refint\
 C:\Users\El-Mester\source\repos\ScholarComp\ScholarComp\obj\Debug\net8.0\ScholarComp.pdb
 C:\Users\El-Mester\source\repos\ScholarComp\ScholarComp\obj\Debug\net8.0\ScholarComp.genruntimeconfig.cache
 C:\Users\El-Mester\source\repos\ScholarComp\ScholarComp\obj\Debug\net8.0\ref\ScholarComp.dll
+C:\Users\El-Mester\source\repos\ScholarComp\ScholarComp\obj\Debug\net8.0\ScholarComp.sourcelink.json
