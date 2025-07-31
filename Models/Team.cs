@@ -18,4 +18,16 @@ public partial class Team
     public long? ProjectId { get; set; }
 
     public long StatusId { get; set; }
+
+    public virtual Class Class { get; set; } = null!;
+
+    public virtual Project? Project { get; set; }
+
+    public virtual Status Status { get; set; } = null!;
+
+    public virtual Account? SupervisorAccount { get; set; }
+
+    public virtual Account? TeamLeaderAccount { get; set; }
+
+    public virtual ICollection<TeamMember> TeamMembers { get; set; } = new List<TeamMember>();
 }

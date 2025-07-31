@@ -20,4 +20,12 @@ public partial class Task
     public long AdminAccountId { get; set; }
 
     public long StatusId { get; set; }
+
+    public virtual Account AdminAccount { get; set; } = null!;
+
+    public virtual Grade Grade { get; set; } = null!;
+
+    public virtual Status Status { get; set; } = null!;
+
+    public virtual ICollection<StudentTask> StudentTasks { get; set; } = new List<StudentTask>();
 }

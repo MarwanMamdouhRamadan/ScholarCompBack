@@ -3,17 +3,19 @@ using System.Collections.Generic;
 
 namespace ScholarComp.Models;
 
-public partial class ReviewerSupervisorExtension
+public partial class Login
 {
+    public long Id { get; set; }
+
     public long AccountId { get; set; }
 
-    public long? AssignedClassId { get; set; }
+    public string Email { get; set; } = null!;
+
+    public string PasswordHash { get; set; } = null!;
 
     public long StatusId { get; set; }
 
     public virtual Account Account { get; set; } = null!;
-
-    public virtual Class? AssignedClass { get; set; }
 
     public virtual Status Status { get; set; } = null!;
 }
