@@ -1,0 +1,6 @@
+@ScholarShipComp_HostAddress = http://localhost:5038
+
+GET {{ScholarShipComp_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
